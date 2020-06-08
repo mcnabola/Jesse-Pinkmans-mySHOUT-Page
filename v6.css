@@ -1,0 +1,52 @@
+
+/* Non relevant styles - comments werent like this in codepen // */
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #6439a9;
+}
+
+.container {
+  padding: 100px 30px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Relevant styles*/
+.image-stack {
+  display: grid;
+  position: relative; /* imperative for the overlapping to work*/
+  grid-template-columns: repeat(12, 1fr);  /*12 columns - 1 fractional unit each*/ 
+}
+
+.image-stack__item--bottom {
+  grid-column: span 12 / -1;/*4 / -1;*/  /*starts at span4 and continues to the end (-1 enables that)*/
+  grid-row: 1;
+  z-index: 0;
+}
+
+
+.image-stack__item--top {
+  grid-row: 1;     /*the images are on teh same row*/
+  grid-column: 1 / span 12; /*1 / span 8;*/ /*starts at beginning goes up to col. 8*/  
+  padding-top: 81%;  /*slightly arbitrary keeps proportion once resized*/
+  z-index: -1;
+}
+
+.image-stack__item--top-2 {
+  grid-row: 1;     /*the images are on teh same row*/
+  grid-column: 1 / span 12; /*1 / span 8;*/ /*starts at beginning goes up to col. 8*/  
+  padding-top: 81%;  /*slightly arbitrary keeps proportion once resized*/
+  z-index: 1; /* tells the browser to make this image on top*/
+}
+
+img {
+  display: block;
+  width: 100%;
+  
+}
