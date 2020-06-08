@@ -17,6 +17,18 @@ p {
   max-width: 900px;
 }
 
+
+.header{
+	display:grid;
+	grid-template-columns: 50% 50%;
+}
+
+.intro{
+	display:grid;
+	grid-template-columns: 40% 60%;
+}
+
+
 /* Relevant styles*/
 .image-stack {
   display: grid;
