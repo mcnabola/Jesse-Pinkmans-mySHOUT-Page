@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+	background-image: url("pattern_background.png");
+	background-repeat: repeat; /* -y repeat-x;*/
+}
+
 p {
   font-size: 20px;
   font-family: sans-serif;
-  color: #6439a9;
+  color: white;
 }
 
 .container {
